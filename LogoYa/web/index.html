@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>LogoYa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/materialize.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <script src="js/Validaciones.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card-panel center-align hoverable">
+                <img  src="multimedia/FINAL1-PNG.png" alt="" style="width: 50%;"/>
+            </div>
+            <div class="empresas left hoverable">
+                <font size="30" class="tittle">
+                Necesito diseño de...
+                </font>
+                <form action="formularioempresas1.jsp">
+                    <div class="input-field col s12 m6">
+                        <input type="checkbox" value="si" name="logo" id="logo" />
+                        <label for="logo">Logo</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="checkbox" value="si" name="flayer" id="flayer"/>
+                        <label for="flayer">Flayer</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="checkbox" value="si" name="pendon" id="pendon"/>
+                        <label for="pendon">Pendón</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="checkbox" value="si" name="tajeta" id="tarjeta" />
+                        <label for="tarjeta">Tarjeta de presentación</label>
+                    </div><br><br>
+                    <div>
+                        <input class=" btn" type="submit" value="Continuar">                        
+                    </div>
+                    </form>
+            </div>
+            <div class="diseñadores right hoverable">
+                <font size="5" class="tittle">
+                Quiero ganar dinero extra.<br>
+                Mis tarifas
+                </font>
+                <form action="formulariodiseñadores1.jsp">  
+                    
+                    <div class="input-field col s6 m3">
+                        <input id="preciologo" type="text"  name="preciologo" required="" class="" onkeypress="solonum()" >
+                        <label id="lbldocu" for="preciologo" >Diseño de logo desde: *$</label>
+                        <div id="vldrDocumento" style="color:#f57c00;"> </div>
+                    </div>
+                    <div class="input-field col s6 m3">
+                        <input id="preciopendon" type="text"  name="preciopendon" required="" class="" onkeypress="solonum()">
+                        <label id="lbldocu" for="preciopendon" >Diseño de pendon desde: *$</label>
+                        <div id="vldrDocumento" style="color:#f57c00;"> </div>
+                    </div>
+                    <div class="input-field col s6 m3">
+                        <input id="precioflayer" type="text"  name="precioflayer" required="" class="" onkeypress="solonum()">
+                        <label id="lbldocu" for="precioflayer" >Diseño de flayer desde: *$</label>
+                        <div id="vldrDocumento" style="color:#f57c00;"> </div>
+                    </div>
+                    <div class="input-field col s6 m3">
+                        <input id="preciotarjeta" type="text"  name="preciotarjeta" required="" class=""onkeypress="solonum()" >
+                        <label id="lbldocu" for="preciotarjeta" >Diseño de tarjeta de presentación desde: *$</label>
+                        <div id="vldrDocumento" style="color:#f57c00;"> </div>
+                    </div>
+                    <div>
+                        <input class=" btn" type="submit" value="Continuar">
+                    </div>
+                </form> 
+            </div>
+        </div>
+     
+    </body>
+
+</html>

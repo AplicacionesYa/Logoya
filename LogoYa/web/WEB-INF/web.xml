@@ -2,11 +2,19 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>ServletFreelance</servlet-name>
-        <servlet-class>LogoYa.controller.Servlet.ServletFreelance</servlet-class>
+        <servlet-class>logoya.controller.servlets.ServletFreelance</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletImage</servlet-name>
+        <servlet-class>logoya.controller.servlets.ServletImage</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletFreelance</servlet-name>
         <url-pattern>/ServletFreelance</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletImage</servlet-name>
+        <url-pattern>/ServletImage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

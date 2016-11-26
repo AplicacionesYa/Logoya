@@ -28,6 +28,13 @@ function  inserFreelance() {
     this.cell_phone = document.getElementById("celular").value;
     this.password = document.getElementById("clave").value;
     this.password2 = document.getElementById("reclave").value;
+    var priceLogo = $("#preciologo").text().trim();
+    var priceBanner = $("#preciopendon").text().trim();
+    var priceFlayer = $("#precioflayer").text().trim();
+    var priceCard = $("#preciotarjeta").text().trim();
+    var fileUpload = $('#fileUpload').val();
+   
+//var blog = getUrlParameter('blog');
 
     //remover espacios en blanco al principio y al final
     name = name.trim();
@@ -35,6 +42,7 @@ function  inserFreelance() {
     password = password.trim();
     password2 = password2.trim();
     alert(name + email + cell_phone + password + password2);
+    
     //validacion de los campos formulario diseñadores 1
     if (name === "") {
         $("#nombre").focus();
@@ -123,15 +131,29 @@ function  inserFreelance() {
 //-------------------------------------------------------->>> AJAX INSERTAR DATOS FREELANCE <<<---------------------------------------------------------
    
     $.ajax({method: "POST",
-        url: "ServletFreelance",
+        url: "../ServletFreelance",
+         cache: false,
+         contentType: 'multipart/form-data',
+     
+         
         data: {
             validation: "insertFrelance",
             name: name,
             email: email,
             cell_phone: cell_phone,
-            password: password
+            password: password,
+            priceLogo : priceLogo,
+            priceBanner : priceBanner,
+            priceFlayer : priceFlayer,
+            priceCard : priceCard,
+            fileUpload: fileUpload
         }, success: function (data, textStatus, jqXHR) {
             alert(data+" "+textStatus+" "+ jqXHR);
+            
+                var imageData = fileUpload;
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("POST", "ServletImage", true);
+                xmlhttp.send(imageData);
         }, error: function (jqXHR, textStatus, errorThrown) {
             alert("error: " + errorThrown);
         }
